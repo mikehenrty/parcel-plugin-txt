@@ -1,0 +1,9 @@
+{
+  "name": "parcel-plugin-txt",
+  "version": "1.0.0",
+  "description": "allows importing text files (.txt) as strings",
+  "main": "index.js",
+  "dependencies": {
+    "parcel-bundler": "^1.10.3"
+  }
+}
