@@ -1,20 +1,20 @@
 const { Asset } = require('parcel-bundler');
 
+const REGEX_ALL_BACKTICKS = /`/g;
+const ESCAPED_BACKTICK = '\\`';
+
 class TxtAsset extends Asset {
-  // type = 'js';
 
   constructor (name, pkg, options) {
     super(name, pkg, options);
     this.type = 'js';
-    console.log('now were getting somewheres');
   }
 
   generate () {
-    const content = this.contents.replace(/`/g, '\\`');
-    console.log('got contents', contents);
+    const escapedText = this.contents.replace(REGEX_ALL_BACKTICKS, ESCAPED_BACKTICK);
     return [{
       type: 'js',
-      value: `module.exports = \`${content}\``
+      value: `module.exports = \`${escapedText}\``,
     }];
   }
 }
