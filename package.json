@@ -1,6 +1,6 @@
 {
   "name": "parcel-plugin-txt",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "allows importing text files (.txt) as strings",
   "repository": {
     "type": "git",
